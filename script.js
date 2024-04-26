@@ -33,7 +33,7 @@ function genAnswer() {
         Endif
       End
     endFunction
-    function ${functionName}Calc(${varNameGlobalInput2}:integer):reel
+    function ${functionName}Fnc(${varNameGlobalInput2}:integer):reel
       Variables:
         ${varNameGlobalI}:integer
         ${varNameGlobalSum}:reel
@@ -46,7 +46,7 @@ function genAnswer() {
     endFunction
 `,
 `
-    function ${functionName}(${varNameGlobalInput1}:integer):reel
+    function ${functionName}Fnc(${varNameGlobalInput1}:integer):reel
       Variables:
        ${varNameGlobalSum}:reel
        ${varNameGlobalI},${varNameGlobalFact}:integer
@@ -73,7 +73,7 @@ Algorithm exo7TD3
   Begin:
     write(“${qest1[rng]}”)
     read(${varNameGlobalN})
-    ${varNameGlobalResult} ⬅ ${functionName}(${varNameGlobalN})
+    ${varNameGlobalResult} ⬅ ${functionName}Fnc(${varNameGlobalN})
     write(${varNameGlobalResult})
   End
 `
